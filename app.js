@@ -245,8 +245,8 @@ Respond ONLY with a valid JSON object in the exact format below, with NO markdow
   "exampleKo": "회사는 재생 에너지 쪽으로 초점을 옮기기로 결정했습니다."
 }`;
 
-    const primaryModel = "gemini-2.5-flash";
-    const fallbackModel = "gemini-2.5-flash";
+    const primaryModel = "gemini-3.8-flash";
+    const fallbackModel = "gemini-3.8-flash";
 
     let endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${primaryModel}:generateContent?key=${encodeURIComponent(apiKey)}`;
 
@@ -325,9 +325,9 @@ Respond strictly with a JSON object containing keys "meaning" (all major Korean 
 
     let response;
     try {
-      response = await puter.ai.chat(prompt, { model: "gemini-2.5-flash" });
+      response = await puter.ai.chat(prompt, { model: "gemini-3.8-flash" });
     } catch (modelErr) {
-      console.warn("gemini-2.5-flash fallback to gemini-1.5-flash on Puter.js:", modelErr);
+      console.warn("gemini-3.8-flash fallback to gemini-1.5-flash on Puter.js:", modelErr);
       try {
         response = await puter.ai.chat(prompt, { model: "gemini-1.5-flash" });
       } catch (subErr) {
