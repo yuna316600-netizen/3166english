@@ -246,7 +246,7 @@ Respond ONLY with a valid JSON object in the exact format below, with NO markdow
 }`;
 
     const primaryModel = "gemini-2.5-flash";
-    const fallbackModel = "gemini-1.5-flash";
+    const fallbackModel = "gemini-2.5-flash";
 
     let endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${primaryModel}:generateContent?key=${encodeURIComponent(apiKey)}`;
 
