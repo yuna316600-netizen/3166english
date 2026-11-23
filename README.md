@@ -1,13 +1,13 @@
 # 영어 단어 시험 웹앱 (Gemini AI 최신 모델 연동)
 
-영단어를 입력하고 **`[✨ 제미나이로 뜻·예문 자동 완성]`** 버튼을 누르면, **Google Gemini AI(`gemini-2.5-flash`)**가 단어의 모든 주요 품사별·의미별 뜻과 자연스러운 실전 영어 예문(한국어 해석 포함)을 자동으로 생성하여 입력해 주는 영어 단어 암기 학습 웹 애플리케이션입니다.
+영단어를 입력하고 **`[✨ 제미나이로 뜻·예문 자동 완성]`** 버튼을 누르면, **Google Gemini AI(`gemini-3.8-flash`)**가 단어의 모든 주요 품사별·의미별 뜻과 자연스러운 실전 영어 예문(한국어 해석 포함)을 자동으로 생성하여 입력해 주는 영어 단어 암기 학습 웹 애플리케이션입니다.
 
 ---
 
 ## 🌟 Gemini API 연동 최적화
 
 1. **최신 표준 모델 엔드포인트 적용**:
-   * Google의 최신 표준 모델인 **`gemini-2.5-flash`**(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`)를 기본 호출 엔드포인트로 설정하였으며, 키 환경에 따라 `gemini-1.5-flash`로 자동 폴백을 지원합니다.
+   * Google의 최신 표준 모델인 **`gemini-3.8-flash`**(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent`)를 기본 호출 엔드포인트로 설정하였으며, 키 환경에 따라 `gemini-1.5-flash`로 자동 폴백을 지원합니다.
 2. **API 키 실시간 저장 및 앞뒤 공백(trim) 완전 제거**:
    * API 키를 복사해 붙여넣거나 입력하는 즉시 앞뒤 공백을 자동으로 잘라내어(`trim`) `localStorage`에 실시간 저장하므로, 별도 저장 버튼을 누르지 않아도 곧바로 정확하게 사용됩니다.
 3. **구체적인 오류 원인 표시**:
